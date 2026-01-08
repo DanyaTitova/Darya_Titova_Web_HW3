@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s;
+}
+
+body.win {
+    background-color: #c8f7c5;
+}
+
+body.draw {
+    background-color: #f7e7c5;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#status {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.cell {
+    background-color: white;
+    border: 2px solid #333;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell.x {
+    background-color: #d0e7ff;
+}
+
+.cell.o {
+    background-color: #f4d6ff;
+}
+
+.cell.taken {
+    cursor: default;
+}
+
+.cell.win {
+    background-color: #7CFC98;
+}
+
+button {
+    padding: 15px 20px;
+    background-color: rgb(128, 127, 122);
+    color: rgb(254, 254, 254);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
